@@ -1,6 +1,23 @@
 {
-  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "allowJs": true, // Allows JavaScript files to be compiled
+    "skipLibCheck": true, // Skips type checking of all declaration files (helps with third-party libraries)
+    "noEmit": true, // No files should be emitted
+    "isolatedModules": true, // Ensures that each file can be safely transpiled without relying on other imports
+    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules
+    "resolveJsonModule": true, // Allows importing JSON modules
+    "experimentalDecorators": true, // Enables experimental support for decorators
+    "emitDecoratorMetadata": true // Enables experimental support for emitting type metadata for decorators
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }
